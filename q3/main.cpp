@@ -23,8 +23,17 @@ using namespace std;
 static bool ConcatRemove(string s, string t, uint16_t k);
 
 int main(void){
-    if(ConcatRemove("blablablabla","blablabcd",8)) cout << "yes";
-    else cout << "no";
+    string s; 
+    string t;
+    uint16_t k = 0;
+    while(1){
+        cout << "Enter s: "; cin >> s;
+        cout << "Enter t: "; cin >> t;
+        cout << "Enter k: "; cin >> k;
+        if(ConcatRemove(s,t,k)) cout << "yes";
+        else cout << "no";
+        cout << endl;
+    }
     return 0;
 }
 
