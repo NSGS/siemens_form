@@ -40,6 +40,7 @@ int main(void){
 static bool ConcatRemove(string s, string t, uint16_t k){
     uint16_t remove_moves = 0;
     uint16_t concat_moves = 0;
+    uint16_t min_moves = 0;
 
     if (s.compare(t) != 0){
         for(uint8_t i=0;i<s.length();i++){
@@ -48,6 +49,11 @@ static bool ConcatRemove(string s, string t, uint16_t k){
     }
 
     concat_moves = t.length() - (s.length() - remove_moves);
+    min_moves = concat_moves + remove_moves;
 
-    return (remove_moves + concat_moves <= k);
+    if (k == min_moves ) return true;
+    else if (k < min_moves) return false;
+    else if (k >= s.length() + t.length()) return true;
+    else if ((k - min_moves)%2 == 0) return true;
+    else return false;
 }
