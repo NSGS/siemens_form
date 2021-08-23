@@ -2,7 +2,7 @@
 
 This program reverses a string informed by the user without using any temporary variable, buffer or any pre-existing function or method for this.
 
-#Code Comments
+# Code Comments
 
 The reverse string is returned by using a pointer that starts at the end of the string and moves to the beginning of it.
 

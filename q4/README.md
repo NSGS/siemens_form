@@ -2,7 +2,7 @@
 
 This is a C++ unit test for ConcatRemove(s,t,k) function.
 
-#Code Comments
+# Code Comments
 
 This unit code has two types of testing: practice and auto.
 
