@@ -6,6 +6,25 @@ This C++ program that performs two types of operations on this string:
 
 Given an integer k and two strings s and t, if you can convert s to t using exactly k operations described above on s the program prints 'yes', otherwise it prints 'no'.
 
+# Code Comments
+
+The ConcatRemove function is implemented calculating the number of minimum moves necessary to convert s to t. After that, some analysis indicates if s can be converted to t using exactly k moves. There are 3 situtations where the function returns true:
+
+*If k is equal to the minimum moves moves necessary, the conversion is possible.
+*If k is equal to or greater than s and t size together, the conversion is possible (remove all characters from s and add all from t).
+*If k minus the minimum moves is even, the conversion is possible. Example:
+```
+S= Tab, T=Tab, K=3
+
+1: S=Ta
+2: S=T
+3: S=Ta
+
+Conversion is not possible.
+```
+
+The user can test the code by typing string s,t and the value of k directly from the terminal.
+
 # Building
 
 To code can be built with CMake. To do that, run the following commands:
