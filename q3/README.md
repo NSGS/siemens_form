@@ -10,9 +10,12 @@ Given an integer k and two strings s and t, if you can convert s to t using exac
 
 The ConcatRemove function is implemented calculating the number of minimum moves necessary to convert s to t. After that, some analysis indicates if s can be converted to t using exactly k moves. There are 3 situtations where the function returns true:
 
-*If k is equal to the minimum moves moves necessary, the conversion is possible.
-*If k is equal to or greater than s and t size together, the conversion is possible (remove all characters from s and add all from t).
-*If k minus the minimum moves is even, the conversion is possible. Example:
+1.If k is equal to the minimum moves moves necessary, the conversion is possible.
+
+2.If k is equal to or greater than s and t size together, the conversion is possible (remove all characters from s and add all from t).
+
+3.If k minus the minimum moves is even, the conversion is possible. Example:
+
 ```
 S= Tab, T=Tab, K=3
 
